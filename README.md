@@ -1,4 +1,41 @@
-# Capstone Project: Terraform & Kubernetes Deployment
+# Capstone Project: Managing user authentication, profile details of users and company
+**Problem Statement:**
+
+Design and develop a comprehensive internship management platform called **Internsheep**. This platform should consist of three main services—Auth Service, User Service, and Company Service. Each service needs to manage distinct functionalities related to user authentication, user profile details, and company details, respectively.
+
+### Requirements:
+1. **Auth Service:**
+   - Register new users and authenticate existing users.
+   - Generate and validate JWT tokens to secure protected routes.
+   - Handle error cases like user already existing, invalid credentials, or missing authorization headers.
+
+2. **User Service:**
+   - Create, update, and retrieve user profiles, including optional profile picture uploads.
+   - Manage user education and work experience entries.
+   - Provide endpoints for uploading and retrieving user resumes.
+
+3. **Company Service:**
+   - Create, update, and retrieve company profiles for users with a company role.
+   - Allow company logo uploads and deletion of company profiles.
+   
+### Key Functionalities to Implement:
+- Secure endpoints using JWT tokens.
+- Implement CRUD operations for user and company profiles.
+- Provide error handling for common issues like invalid tokens, missing data, or user not found.
+- Ensure that the API endpoints are well-documented and accessible for integration with frontend applications.
+
+### Technical Requirements:
+- **Environment Variables:**
+  - Define ports, MongoDB connection strings, JWT secrets, Redis host and port, Kafka broker connection string, AWS region, AWS access keys, and S3 bucket name.
+  
+- **Setup Instructions:**
+  - Use Docker Compose to run the services.
+
+### Objectives:
+- Provide a seamless and secure experience for users to manage their authentication, profiles, and company details.
+- Ensure scalability and maintainability by using microservices architecture.
+- Enhance developer productivity with clear API documentation.
+
 
 This document outlines the implementation details of a fully automated CI/CD pipeline using Jenkins, Terraform, and Kubernetes. It also provides details about the **JobsApp** project, which consists of three main services: Auth Service, User Service, and Company Service. These services manage user authentication, profile details, and company information.
 
