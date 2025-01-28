@@ -54,7 +54,8 @@ services:
     build: 
       context: ./backend/authService
       dockerfile: Dockerfile
-    container_name: authService
+    container_name: authservice
+    image: jobsapp-authservice-backend:v1
     ports:
       - "5000:5000"
     environment:
@@ -73,7 +74,8 @@ services:
     build: 
       context: ./backend/companyService
       dockerfile: Dockerfile
-    container_name: companyService
+    container_name: companyservice
+    image: jobsapp-companyservice-backend:v1
     ports:
       - "5001:5001"
     environment:
@@ -92,7 +94,8 @@ services:
     build: 
       context: ./backend/userService
       dockerfile: Dockerfile
-    container_name: userService
+    container_name: userservice
+    image: jobsapp-userservice-backend:v1
     ports:
       - "5002:5002"
     environment:
