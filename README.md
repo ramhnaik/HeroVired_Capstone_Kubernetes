@@ -5,17 +5,10 @@ This document outlines the implementation details of a fully automated CI/CD pip
 **Main Repository for JobsApp MERN Application**: [JobsApp](https://github.com/UnpredictablePrashant/JobsApp)
    - MERN stack application with APIs for job postings, user authentication, and more.
 
-The deployment repository is split into two parts:
-
-1. **Terraform Repository**: [CapstoneProject-Terraform](https://github.com/arpit1605/CapstoneProject-Terraform.git)
-   - Responsible for provisioning the required cloud infrastructure.
-
-2. **Kubernetes Repository**: [CapstoneProject-Kubernetes](https://github.com/arpit1605/CapstoneProject-Kubernetes.git)
-   - Contains the application code, docker files, and Kubernetes manifests for deployment.
-
+The deployment repository:
+https://github.com/ramhnaik/HeroVired_Capstone_Project
 
 ---
-
 
 ## Architecture Diagram
 
