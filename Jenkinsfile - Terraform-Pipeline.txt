@@ -13,7 +13,7 @@ pipeline {
     stages {
         stage('Checkout Code') {
             steps {
-                git url: 'https://github.com/arpit1605/CapstoneProject-Terraform.git', branch: 'main'
+                git url: 'https://github.com/ramhnaik/HeroVired_Capstone_Project', branch: 'main'
             }
         }
         stage('Initialize Terraform') {
@@ -21,7 +21,7 @@ pipeline {
                 dir("${TERRAFORM_DIR}") {
                     withCredentials([[ 
                         $class: 'AmazonWebServicesCredentialsBinding', 
-                        credentialsId: 'Arpit-AWS-ID'
+                        credentialsId: 'RAMANANDA-AWS-ID'
                     ]]) {
                         sh 'terraform init'
                     }
@@ -33,7 +33,7 @@ pipeline {
                 dir("${TERRAFORM_DIR}") {
                     withCredentials([[ 
                         $class: 'AmazonWebServicesCredentialsBinding', 
-                        credentialsId: 'Arpit-AWS-ID'
+                        credentialsId: 'RAMANANDA-AWS-ID'
                     ]]) {
                         sh 'terraform plan -out=tfplan'
                     }
@@ -45,7 +45,7 @@ pipeline {
                 dir("${TERRAFORM_DIR}") {
                     withCredentials([[ 
                         $class: 'AmazonWebServicesCredentialsBinding', 
-                        credentialsId: 'Arpit-AWS-ID'
+                        credentialsId: 'RAMANANDA-AWS-ID'
                     ]]) {
                         sh 'terraform apply -auto-approve tfplan'
                     }
@@ -75,7 +75,7 @@ pipeline {
                 dir("${TERRAFORM_DIR}") {
                     withCredentials([[ 
                         $class: 'AmazonWebServicesCredentialsBinding', 
-                        credentialsId: 'Arpit-AWS-ID'
+                        credentialsId: 'RAMANANDA-AWS-ID'
                     ]]) {
                         sh 'terraform destroy -auto-approve'
                     }    
